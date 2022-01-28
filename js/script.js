@@ -77,7 +77,7 @@ function createCats(cats) {
   return catObject;
 }
 
-let newCats = createCats(cats);
+const newCats = createCats(cats);
 
-let catContainer = document.querySelector(".cat-container");
+const catContainer = document.querySelector(".cat-container");
 catContainer.innerHTML = newCats;

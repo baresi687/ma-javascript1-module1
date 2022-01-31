@@ -53,7 +53,7 @@ const cats = [
 
 function someListFunction(list) {
   for (let i = 0; i < list.length; i++) {
-    console.log(list[i].name);
+    console.log("The cat name is: " + list[i].name);
   }
 }
 
@@ -64,15 +64,12 @@ someListFunction(cats);
 function createCats(cats) {
   let catObject = "";
   for (let i = 0; i < cats.length; i++) {
-    let catName = cats[i].name;
-    let catAge = cats[i].age ? cats[i].age : "Age unknown";
-
     catObject += `
-    <div>
-    <h5>${catName}</h5>
-    <p>${catAge}</p>
-    </div>
-    `;
+      <div>
+      <h5>Cat name: ${cats[i].name}</h5>
+      <p>Cat age: ${cats[i].age ? cats[i].age : "Age unknown"}</p>
+      </div>
+      `;
   }
   return catObject;
 }
